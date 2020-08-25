@@ -1,0 +1,32 @@
+.starComp {
+  margin: 85px 0px 35px;
+  display: flex;
+}
+
+.starPopUp {
+  fill: #FF385C;
+  filter: brightness(40%);
+  min-width: 18px;
+  max-width: 18px;
+  min-height: 18px;
+  max-height: 18px;
+  margin-right: 10px;
+  background: transparent;
+}
+
+.star {
+  fill: #FF385C;
+  min-width: 18px;
+  max-width: 18px;
+  min-height: 18px;
+  max-height: 18px;
+  margin-right: 10px;
+  background: transparent;
+}
+
+.reviewText {
+  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 20px;
+}

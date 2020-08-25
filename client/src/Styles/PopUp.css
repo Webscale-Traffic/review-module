@@ -1,0 +1,38 @@
+.modal {
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  width: 900px;
+  height: 90%;
+  top: 2%;
+  left: 16%;
+  background: white;
+  align-self: center;
+  position: fixed;
+  overflow: auto;
+  animation: popup 0.30s;
+}
+
+@keyframes popup {
+  0% { transform: translateY(101%)}
+  10% { transform: translateY(90%)}
+  20% { transform: translateY(80%)}
+  30% { transform: translateY(70%)}
+  40% { transform: translateY(60%)}
+  50% { transform: translateY(50%)}
+  60% { transform: translateY(40%)}
+  70% { transform: translateY(30%)}
+  80% { transform: translateY(20%)}
+  90% { transform: translateY(10%)}
+  100% { transform: translateY(0%)}
+}
+
+.button {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  margin: 30px 30px;
+  width: 15px;
+  height: 15px;
+  background: transparent;
+  border: none;
+}

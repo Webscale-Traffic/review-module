@@ -1,0 +1,5 @@
+.reviews {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(530px, auto));
+  grid-template-rows: repeat( auto-fill, minmax(150px, auto) );
+}

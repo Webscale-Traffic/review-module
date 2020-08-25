@@ -1,0 +1,17 @@
+.ratingsContainer {
+  grid-column: 1/2;
+  margin: 30px;
+  margin-left: 35px;
+  color: #222222;
+  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+  font-weight: 300;
+  grid-gap: 10px;
+  font-size: 14px;
+  line-height: 20px;
+  overflow: hidden;
+}
+
+.ratings {
+  display: grid;
+  grid-template-columns: 150px auto;
+}

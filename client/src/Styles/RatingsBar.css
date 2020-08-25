@@ -1,0 +1,34 @@
+.ratingNumber{
+  margin-bottom: 10px;
+  margin-left: -90px;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.middle {
+  margin-top:10px;
+  float: left;
+  width: 200px;
+}
+
+.barBackground {
+  width: 100px;
+  background-color: #cccccc;
+  text-align: center;
+  color: white;
+}
+
+.ratingBar {
+  width: 80%;
+  height: 4px;
+  background-color: black;
+}
+
+@media (max-width: 100px) {
+  .side, .middle {
+    width: 100%;
+  }
+  .right {
+    display: none;
+  }
+}
