@@ -1,12 +1,13 @@
 /* eslint-disable no-console */
-const mysql = require("mysql");
+// const mysql = require("mysql");
 const host = "172.17.0.2"; //localhost
+const psql = require("psql");
 
 const connection = mysql.createConnection({
   host: "localhost",
   user: "root",
-  password: "reborn7528",
-  database: "FEC",
+  password: "root",
+  database: "reviews",
 });
 
 connection.connect((err) => {

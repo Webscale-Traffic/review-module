@@ -11,7 +11,7 @@ class App extends React.Component {
     super();
     this.state = {
       popUp: false,
-      currentHouse: 59, // Devonte
+      currentHouse: 0, // Devonte
       users: [],
       houses: [],
       reviews: [],
