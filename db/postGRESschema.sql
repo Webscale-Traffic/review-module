@@ -23,7 +23,7 @@ CREATE TABLE if not exists reviews (
   locRating SMALLINT,
   checkInRating SMALLINT,
   valueRating SMALLINT,
-  reviewdDate DATE,
+  reviewDate DATE,
   FOREIGN KEY (roomID) REFERENCES rooms(id),
   FOREIGN KEY (userID) REFERENCES users(id)
 );

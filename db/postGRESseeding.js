@@ -4,14 +4,14 @@ const faker = require('faker');
 const rooms = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
 
 const seedRooms = (entries) => {
-  let dataString = '';
+  let roomsData = `id`;
   for (let i = 0 ; i < entries; i++) {
-    dataString += `${i}`;
-    dataString += ` ${rooms[i%15]}`
-    dataString += `\n`
+    roomsData += `${i}`;
+    roomsData += ` ${rooms[i%15]}`
+    roomsData += `\n`
   }
   return new Promise((resolve, reject)=>{
-    fs.writeFile(`rooms.csv`, dataString, (err, data) => {
+    fs.writeFile(`rooms.csv`, roomsData, (err, data) => {
       if (err) {
         reject(err);
       } else {
@@ -22,19 +22,20 @@ const seedRooms = (entries) => {
 };
 
 seedRooms(50)
-  .then(() => console.log('success'))
-  .catch(() => console.log("error!!"))
+  .then(() => console.log('success with rooms'))
+  .catch(() => console.log("error with rooms!!"))
 
 
-const seedRooms = (entries) => {
-  let dataString = '';
+const seedUsers = (entries) => {
+  let usersData = `id, userName, usePic\n`;
   for (let i = 0 ; i < entries; i++) {
-    dataString += `${i}`;
-    dataString += ` ${rooms[i%15]}`
-    dataString += `\n`
+    usersData += `${i}`
+    usersData += ` ${faker.name.firstName()}`
+    usersData += ` ${faker.image.avatar()}`
+    usersData += `\n`
   }
   return new Promise((resolve, reject)=>{
-    fs.writeFile(`rooms.csv`, dataString, (err, data) => {
+    fs.writeFile(`users.csv`, usersData, (err, data) => {
       if (err) {
         reject(err);
       } else {
@@ -44,18 +45,71 @@ const seedRooms = (entries) => {
   });
 };
 
-seedRooms(50)
-  .then(() => console.log('success'))
-  .catch(() => console.log("error!!"))
+
+seedUsers(50)
+  .then(() => console.log('success with users'))
+  .catch(() => console.log("error with users!!"))
 
 
-let seedUsers = () => {
-  const usersQuery = `INSERT INTO rooms (userName, userPic) VALUES (${faker.firstName}, `;
-  db.query(roomsQuery, (err, results) => {
-    if (err) {
-      console.log(err);
-    } else {
-      console.log('product images shown', results)
-    }
-  })
-}
+const ratings = [1.5, 3.8, 3.9, 4.0]
+
+const seedReviews = (entries) => {
+  let reviewsData = `id, userID, review, roomID, cleanRating, accuracyRating, commnRating, locRating, checkInRating, valueRating, reviewDate\n`;
+  for (let i = 0 ; i < entries; i++) {
+    reviewsData += `${i}`;
+    reviewsData += ` ${i}`
+    reviewsData += ` ${faker.lorem.sentences()}`
+    reviewsData += ` ${i}`
+    reviewsData += ` ${faker.random.number({'min': 2, 'max': 6})}`
+    reviewsData += ` ${faker.random.number({'min': 2, 'max': 6})}`
+    reviewsData += ` ${faker.random.number({'min': 2, 'max': 6})}`
+    reviewsData += ` ${faker.random.number({'min': 2, 'max': 6})}`
+    reviewsData += ` ${faker.random.number({'min': 2, 'max': 6})}`
+    reviewsData += ` ${faker.random.number({'min': 2, 'max': 6})}`
+    reviewsData += ` ${faker.date.past()}`
+    reviewsData += `\n`
+  }
+
+  return new Promise((resolve, reject)=>{
+    fs.writeFile(`reviews.csv`, reviewsData, (err, data) => {
+      if (err) {
+        reject(err);
+      } else {
+        resolve(data);
+        // resolve((data) => {seedReviews(id), data});
+      }
+    });
+  });
+};
+
+seedReviews(50)
+  .then(() => console.log('success with reviews'))
+  .catch(() => console.log("error with reviews!!"))
+
+
+
+const seedResponses = (entries) => {
+  let responsesData = `id, reviewID, review, responseDate\n`;
+  for (let i = 0 ; i < entries; i++) {
+    responsesData += `${i}`;
+    responsesData += ` ${i}`
+    responsesData += ` ${faker.lorem.sentences()}`
+    responsesData += ` ${faker.date.past()}`
+    responsesData += `\n`
+  }
+
+  return new Promise((resolve, reject)=>{
+    fs.writeFile(`responses.csv`, responsesData, (err, data) => {
+      if (err) {
+        reject(err);
+      } else {
+        resolve(data);
+        // resolve((data) => {seedReviews(id), data});
+      }
+    });
+  });
+};
+
+seedResponses(50)
+  .then(() => console.log('success with responses'))
+  .catch(() => console.log("error with responses!!"))

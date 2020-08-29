@@ -3,3 +3,9 @@ node_modules
 faker.js
 
 rooms.csv
+
+responses.csv
+
+users.csv
+
+reviews.csv
