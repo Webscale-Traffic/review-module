@@ -7,9 +7,14 @@ db.once('open', () => {
   console.log('Connected to database!');
 });
 
+// const roomsSchema = new mongoose.Schema({
+//   id: Number
+//   reviews: Array
+// })
+
 const reviewsSchema = new mongoose.Schema({
   id: Number,
-  userID: Number,
+  // userID: Number,
   userName: String,
   userPic: String,
   review: String,
@@ -23,9 +28,11 @@ const reviewsSchema = new mongoose.Schema({
   reviewDate: Date,
   ownerName: String,
   ownerResponse: String,
-  responseDate: Date
+  responseDate: String
 });
 
 const Reviews = mongoose.model('Reviews', reviewsSchema, 'reviews');
+// const review = new Reviews({userName: 'bob'})
+// review.save()
 
 module.exports = Reviews;
