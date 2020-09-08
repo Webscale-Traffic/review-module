@@ -9,3 +9,9 @@ responses.csv
 users.csv
 
 reviews.csv
+
+*.csv
+
+*.txt
+
+mongoDriver.js
