@@ -25,21 +25,21 @@ const ModalRatingsContainer = (props) => {
         <span className={styles.typeRating}>Accuracy</span>
         <ModalRatingsBar
           className={styles.barRating}
-          rating={avgRating("accRating")}
+          rating={avgRating("accuracyRating")}
         />
       </div>
       <div className={styles.ratings}>
         <span className={styles.typeRating}>Communication</span>
         <ModalRatingsBar
           className={styles.barRating}
-          rating={avgRating("commRating")}
+          rating={avgRating("commnRating")}
         />
       </div>
       <div className={styles.ratings}>
         <span className={styles.typeRating}>Location</span>
         <ModalRatingsBar
           className={styles.barRating}
-          rating={avgRating("locationRating")}
+          rating={avgRating("locRating")}
         />
       </div>
       <div className={styles.ratings}>

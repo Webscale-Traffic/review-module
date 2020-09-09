@@ -4,7 +4,7 @@ mongoose.connect('mongodb://localhost/reviews', { useNewUrlParser: true });
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'error with connection'));
 db.once('open', () => {
-  console.log('Connected to database!');
+  console.log('Connected to mongo database!');
 });
 
 // const roomsSchema = new mongoose.Schema({
@@ -12,13 +12,17 @@ db.once('open', () => {
 //   reviews: Array
 // })
 
+// const userSchema = new mongoose.Schema({})
+
+
 const reviewsSchema = new mongoose.Schema({
   id: Number,
-  // userID: Number,
+  userID: Number,
   userName: String,
   userPic: String,
   review: String,
   roomID: Number,
+  //(require),
   cleanRating: Number,
   accuracyRating: Number,
   commnRating: Number,
@@ -31,8 +35,8 @@ const reviewsSchema = new mongoose.Schema({
   responseDate: String
 });
 
+//keep notes on my issues on my journal
+
 const Reviews = mongoose.model('Reviews', reviewsSchema, 'reviews');
-// const review = new Reviews({userName: 'bob'})
-// review.save()
 
 module.exports = Reviews;

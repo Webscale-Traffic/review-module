@@ -18,7 +18,10 @@ const Reviews = (props) => {
           popUp={props.popUp}
           key={index}
           review={review}
-          user={props.users[review.userId]}
+          user={props.review}
+          // user={props.users[review.userID]}
+          // user={props.users[index]}
+          // user={props.users}
           currentHouse={props.currentHouse}
         />
       ))}

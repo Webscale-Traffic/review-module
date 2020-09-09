@@ -1,21 +1,16 @@
-/* eslint-disable no-console */
-// const mysql = require("mysql");
-const host = "172.17.0.2"; //localhost
-const psql = require("psql");
+// const mongoose = require('mongoose');
+// mongoose.connect('mongodb://localhost/reviews');
 
-const connection = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "root",
-  database: "reviews",
-});
+// const db = mongoose.connection;
 
-connection.connect((err) => {
-  if (err) {
-    console.log("err");
-  } else {
-    console.log(`Mysql is running on ${host}`);
-  }
-});
+// db.on('error', () => {
+//   console.log('mongoose connection error');
+// });
 
-module.exports = connection;
+// db.once('open', () => {
+//   console.log('mongoose connected successfully');
+// });
+
+
+
+// module.exports = db;

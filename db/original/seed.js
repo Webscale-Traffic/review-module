@@ -82,4 +82,5 @@ const seedComments = () => {
 seedHouses();
 seedUsers();
 seedReviews();
+
 seedComments();

@@ -7,9 +7,9 @@ const ModalStars = (props) => {
   const average = () => {
     props.reviews.map((review) => {
       total += review.cleanRating;
-      total += review.accRating;
-      total += review.commRating;
-      total += review.locationRating;
+      total += review.accuracyRating;
+      total += review.commnRating;
+      total += review.locRating;
       total += review.checkInRating;
       total += review.valueRating;
       numberOfReview += 1;
@@ -20,12 +20,10 @@ const ModalStars = (props) => {
 
   return (
     <div className={styles.starComp}>
-
       <img
         className={styles.star}
         src="https://7528bnbimages.s3-us-west-1.amazonaws.com/bnbstar.png"
       />
-
       <span className={styles.reviewText}>
         {(total / 6 / numberOfReview).toFixed(2)} ({numberOfReview} reviews)
       </span>

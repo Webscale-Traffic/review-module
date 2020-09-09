@@ -31,7 +31,7 @@ const RatingsContainer = (props) => {
 
         <RatingsBar
           className={styles.barRating}
-          rating={avgRating("accRating")}
+          rating={avgRating("accuracyRating")}
         />
 
       </div>
@@ -40,7 +40,7 @@ const RatingsContainer = (props) => {
 
         <RatingsBar
           className={styles.barRating}
-          rating={avgRating("commRating")}
+          rating={avgRating("commnRating")}
         />
 
       </div>
@@ -49,7 +49,7 @@ const RatingsContainer = (props) => {
 
         <RatingsBar
           className={styles.barRating}
-          rating={avgRating("locationRating")}
+          rating={avgRating("locRating")}
         />
 
       </div>
