@@ -9,9 +9,9 @@ const Stars = (props) => {
   const average = () => {
     props.reviews.map((review) => {
       total += review.cleanRating;
-      total += review.accRating;
-      total += review.commRating;
-      total += review.locationRating;
+      total += review.accuracyRating;
+      total += review.commnRating;
+      total += review.locRating;
       total += review.checkInRating;
       total += review.valueRating;
       numberOfReview += 1;

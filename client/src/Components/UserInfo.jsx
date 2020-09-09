@@ -14,15 +14,15 @@ const UserInfo = (props) => {
     <div className={styles.user}>
       <img
         className={styles.userUrl}
-        src={props.user.userUrl}
+        src={props.review.userPic}
         onClick={() => {
-          alert(`Hi my name is ${props.user.userName}`);
+          alert(`Hi my name is ${props.review.userName}`);
         }}
       />
       <span className={styles.users}>
-        <span className={styles.userName}> {props.user.userName} </span>
+        <span className={styles.userName}> {props.review.userName} </span>
         <br />
-        <span className={styles.userDate}> {props.user.dateReviewed} </span>
+        <span className={styles.userDate}> {props.review.reviewDate} </span>
       </span>
 
       {props.review.review.length < 150 ? (

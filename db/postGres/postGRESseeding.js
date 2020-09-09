@@ -103,15 +103,8 @@ const seedReviews = (writer, encoding, callback) => {
     let ok = true;
     do {
       i -= 1;
-      // roomIDNumber += 1;
-      // id += 1;
-      // let numberOfReviews = reviewsValue[i%8];
       let numberOfReviews = reviewsValue[faker.random.number({'min': 0, 'max': 6})];
-      // let reviewsText = reviews1];
-      // let reviewsData = `id, userID, review, roomID, cleanRating, accuracyRating, commnRating, locRating, checkInRating, valueRating, reviewDate\n`;
       let roomIDNumber = faker.random.number({'min': 1, 'max': 10000000})
-      // let reviewsData = '';
-      // const reviewsData = `${id}, ${userID}, ${review}, ${roomID}, ${cleanRating}, ${accuracyRating}, ${commnRating}, ${locRating}, ${checkInRating}, ${valueRating}, ${reviewDate}, ${ownerName}, ${ownerResponse}, ${responseDate}\n`;
       for (let j = 0; j < numberOfReviews; j++) {
         id += 1;
         // i%100000000

@@ -15,7 +15,8 @@ const ModalReviews = (props) => {
         <ModalUserInfo
           key={index}
           review={review}
-          user={props.users[review.userId]}
+          user={props.review}
+          // user={props.users[review.userID]}
           currentHouse={props.currentHouse}
         />
       ))}

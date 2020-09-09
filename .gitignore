@@ -15,3 +15,7 @@ reviews.csv
 *.txt
 
 mongoDriver.js
+
+newrelic.js
+
+newrelic_agent.log
