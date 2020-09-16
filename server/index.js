@@ -17,6 +17,9 @@ app.use(parser.json());
 
 app.listen(port, () => console.log(`Listening At Port ${port}`));
 
+app.get("/loaderio-edb2686c804db5c5764a06b6545aee07", (req, res) => {
+  res.send("loaderio-edb2686c804db5c5764a06b6545aee07")
+});
 
 app.get("/rooms/:roomID/reviews", (req, res) => {
   var roomID = req.params.roomID;
@@ -30,6 +33,9 @@ app.get("/rooms/:roomID/reviews", (req, res) => {
   });
 });
 
+// app.post("/loaderio-edb2686c804db5c5764a06b6545aee07", (req, res) => {
+//   res.send("loaderio-edb2686c804db5c5764a06b6545aee07")
+// });
 
 app.post('/rooms/:roomID/reviews', (req, res) => {
   var roomID = req.params.roomID;
