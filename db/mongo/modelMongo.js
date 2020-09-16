@@ -1,4 +1,4 @@
-const db = require('../index.gitjs');
+const db = require('../index.js');
 const Reviews = require('./mongo.js');
 
 const getReviews = (roomID, callback) => {
