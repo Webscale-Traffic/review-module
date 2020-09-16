@@ -19,3 +19,5 @@ mongoDriver.js
 newrelic.js
 
 newrelic_agent.log
+
+term*.js

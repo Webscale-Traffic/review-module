@@ -27,9 +27,10 @@ const seedReviews = (writer, encoding, callback) => {
   const potentialAvatar = ['https://s3.amazonaws.com/uifaces/faces/twitter/alevizio/128.jpg', 'https://s3.amazonaws.com/uifaces/faces/twitter/saarabpreet/128.jpg', 'https://s3.amazonaws.com/uifaces/faces/twitter/abovefunction/128.jpg', 'https://s3.amazonaws.com/uifaces/faces/twitter/marcomano_/128.jpg', 'https://s3.amazonaws.com/uifaces/faces/twitter/kurafire/128.jpg', 'https://s3.amazonaws.com/uifaces/faces/twitter/commadelimited/128.jpg', 'https://s3.amazonaws.com/uifaces/faces/twitter/jqiuss/128.jpg', 'https://s3.amazonaws.com/uifaces/faces/twitter/wim1k/128.jpg', 'https://s3.amazonaws.com/uifaces/faces/twitter/salvafc/128.jpg', 'https://s3.amazonaws.com/uifaces/faces/twitter/naupintos/128.jpg']
   const responsePotential = ['Liza', 'Isobel', 'Gregoria', null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null];
   // const responsePotential = [faker.name.firstName(), null, null, null, null, null, null, null, null, null, null];
-  let i = 100000000;
+  let i = 34000000;
   // let i = 1170;
-  let id = 0;
+  let id = 66000000;
+  // let id = 33 // do id 33 if i want it to start at 34
   function write() {
     let ok = true;
     do {
@@ -64,7 +65,7 @@ const seedReviews = (writer, encoding, callback) => {
   write()
 }
 
-const writeStreamReviews = fs.createWriteStream('./mongoReviewsAll2.csv')
+const writeStreamReviews = fs.createWriteStream('./mongoReviewsPart3.csv')
 const line1Reviews = `id, userID, userName, userPic, review, roomID, cleanRating, accuracyRating, commnRating, locRating, checkInRating, valueRating, reviewDate, ownerName, ownerResponse, responseDate\n`;
 writeStreamReviews.write(line1Reviews);
 seedReviews(writeStreamReviews, 'ascii', ()=>{

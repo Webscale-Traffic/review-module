@@ -2,10 +2,8 @@ const db = require('../index.js');
 const Reviews = require('./mongo.js');
 
 const getReviews = (roomID, callback) => {
-  console.log(roomID, "data from mongo mondel")
   Reviews.find(({ roomID: roomID }), (err, docs) => {
     if (err) {
-      console.log(err);
       callback(err, null);
     } else {
       callback(null, docs);
@@ -14,13 +12,10 @@ const getReviews = (roomID, callback) => {
 }
 
 const postReviews = (data, callback) => {
-  console.log(data, "data from mongo model")
   Reviews.create(data, (err, docs) => {
     if (err) {
-      console.log(err);
       callback(err, null);
     } else {
-      console.log("post success");
       callback(null, docs);
     }
   })

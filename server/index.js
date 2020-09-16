@@ -21,7 +21,6 @@ app.listen(port, () => console.log(`Listening At Port ${port}`));
 app.get("/rooms/:roomID/reviews", (req, res) => {
   var roomID = req.params.roomID;
   //this should match the :roomID on line 24
-  console.log(roomID, "room id from server");
   db.getReviews(roomID, (err, data) => {
     if (err) {
       res.status(400);
@@ -36,12 +35,10 @@ app.post('/rooms/:roomID/reviews', (req, res) => {
   var roomID = req.params.roomID;
   //this should match the :roomID on line 24
   // console.log(roomID, "room id from server");
-  console.log(req.body, "req.body")
   db.postReviews(req.body, (err, data) => {
     if (err) {
       res.status(400);
     } else {
-      console.log("successful post")
       res.status(200).send(data);
     }
   });

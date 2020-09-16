@@ -9,9 +9,16 @@ export let options = {
   ],
 };
 
+// export default function() {
+//   let roomID = Math.floor(Math.random() * 9999999) + 1;
+//   let res = http.get(`http://localhost:3003/rooms/${roomID}/reviews`);
+//   check(res, { 'status was 200': r => r.status == 200 });
+//   sleep(1);
+// }
+
 export default function() {
   let roomID = Math.floor(Math.random() * 9999999) + 1;
-  let res = http.get(`http://localhost:3003/rooms/${roomID}/reviews`);
+  let res = http.post(`http://localhost:3003/rooms/${roomID}/reviews`);
   check(res, { 'status was 200': r => r.status == 200 });
   sleep(1);
 }
