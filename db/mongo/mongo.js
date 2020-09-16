@@ -25,12 +25,30 @@
 
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost/reviews', { useNewUrlParser: true });
+var options = {
+        user: "root",
+        pass: "root"
+};
+
+mongoose.connect('mongodb://root:root@54.193.19.108:27017/reviews',
+        { useNewUrlParser: true, useUnifiedTopology: true, auth: { "authSource": "admin" },
+    user: "root",
+    pass: "root",
+poolSize: process.env.MONGO_POOLSIZE || 1}
+);
+
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'error with connection'));
 db.once('open', () => {
   console.log('Connected to mongo database!');
 });
+
+// mongoose.connect('mongodb://localhost/reviews', { useNewUrlParser: true });
+// const db = mongoose.connection;
+// db.on('error', console.error.bind(console, 'error with connection'));
+// db.once('open', () => {
+//   console.log('Connected to mongo database!');
+// });
 
 // const roomsSchema = new mongoose.Schema({
 //   id: Number
