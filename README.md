@@ -1,13 +1,4 @@
-# AirBnb
-
-7LuckyAirbnboiiz clone of AirBnB. Front-End Capstone project from Hack Reactor
-
-## Related Projects
-
-  - https://github.com/7LuckyAirbnboiiz/image_carousel
-  - https://github.com/7LuckyAirbnboiiz/gallery
-  - https://github.com/7LuckyAirbnboiiz/calendar
-  - https://github.com/7LuckyAirbnboiiz/reviews-section
+# Travel Booking Application
 
 ## Table of Contents
 
