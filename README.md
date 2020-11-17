@@ -8,7 +8,7 @@
 
 ## LoaderIO
 
-> ![getrequest](https://imgur.com/SfaqvEE)
+> ![getrequest](https://i.imgur.com/SfaqvEE.png)
 
 ## Requirements
 
